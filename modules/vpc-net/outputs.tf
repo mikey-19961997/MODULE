@@ -15,5 +15,5 @@ output "subnets_name" {
 }
 
 output "subnetcount" {
-    value = var.subnet_details.Name
+    value = length(var.subnet_details.Name)
 }
