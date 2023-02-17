@@ -11,11 +11,7 @@ output "vpc_cidr_block" {
 }
 
 output "subnets_name" {
-    value = var.subnet_details.Name[count.index]
-}
-
-output"subnetids" {
-    value = element(aws_subnet.subnets[*].id,count.index)
+    value = var.subnet_details.Name
 }
 
 output "subnetcount" {
