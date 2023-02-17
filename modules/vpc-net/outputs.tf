@@ -14,6 +14,10 @@ output "subnets_name" {
     value = var.subnet_details.Name[count.index]
 }
 
-outputs"subnetids" {
+output"subnetids" {
     value = element(aws_subnet.subnets[*].id,count.index)
+}
+
+output "subnetcount" {
+    value = var.subnet_details.Name
 }
